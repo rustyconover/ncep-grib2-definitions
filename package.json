@@ -4,6 +4,7 @@
   "description": "Parse some NCEP webpages to create GRIB2 definitions.",
   "main": "index.js",
   "scripts": {
+    "go": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

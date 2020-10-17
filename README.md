@@ -3,7 +3,7 @@
 This script parses various disciplines and category webpages from
 NCEP and outputs definitions for GRIB messages for use with GRIB.jl
 
-## Install
+### Install
 
 ```
 npm install
