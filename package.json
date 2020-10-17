@@ -1,0 +1,26 @@
+{
+  "name": "ncep-grib2-definitions",
+  "version": "1.0.0",
+  "description": "Parse some NCEP webpages to create GRIB2 definitions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rusty Conover (rusty@conover.me)",
+  "license": "MIT",
+  "dependencies": {
+    "@types/lodash": "^4.14.162",
+    "@types/request": "^2.48.5",
+    "@types/request-promise-native": "^1.0.17",
+    "bent": "^7.3.12",
+    "cheerio": "^1.0.0-rc.3",
+    "cheerio-tableparser": "^1.0.1",
+    "lodash": "^4.17.20",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3",
+    "zero-fill": "^2.2.4"
+  }
+}
