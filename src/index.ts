@@ -44,17 +44,20 @@ async function pull_category(
 
         if (x === 0) {
           let cleaned = v.replace("<br>", "").trim();
-          if (cleaned.match(/\d/)) {
+          if (cleaned.match(/^\d+$/)) {
             return parseInt(cleaned, 10);
           } else {
             return v;
           }
         } else if (x === 1 && v != null) {
-          return v
+          let cleaned = v
             .replace(/\n[ ]*/g, " ")
             .replace(/\n/g, " ")
             .replace("<br>", "")
+            .replace(/\*\*\*/, "")
+            .replace(/ *\(See Note.*?\)/i, "")
             .trim();
+          return cleaned;
         } else if (x === 2 && v != null) {
           // Cleanup superscripts/subscripts.
           let cleaned = v
@@ -80,6 +83,7 @@ async function pull_category(
   return rows;
 }
 
+
 const missing_messages: Array<number[]> = _.uniq([
   "0:16:3",
   "0:2:220",
@@ -100,6 +104,29 @@ const missing_messages: Array<number[]> = _.uniq([
   "3:192:2",
   "3:192:7",
   "3:192:8",
+  "0:16:196",
+"0:16:195",
+"0:16:195",
+"0:16:195",
+"0:3:198",
+"0:16:195",
+"0:17:192",
+"2:0:194",
+"0:1:8",
+"0:1:225",
+"0:7:6",
+"0:7:7",
+"0:6:1",
+"0:4:200",
+"0:4:201",
+"0:7:193",
+"0:7:6",
+"0:7:7",
+"0:7:6",
+"0:7:7",
+"0:7:6",
+"0:7:7",
+"0:3:200",
 ]).map((x) => x.split(/:/).map((x) => parseInt(x, 10)));
 
 console.log(
